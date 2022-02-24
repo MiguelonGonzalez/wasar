@@ -14,10 +14,10 @@ Since geopandas sometimes is hardly to install, before installing dinsar I recom
 
 ### Dependencies
 
-- geopandas>=0.10.2
-- pandas>=1.3.2
-- matplotlib>=3.4.2
-- folium
+- `geopandas`
+- `pandas`
+- `matplotlib`
+- `folium`
     
 
 ## Get in touch
