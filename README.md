@@ -27,7 +27,7 @@ Since geopandas sometimes is hardly to install, before installing dinsar I recom
 ## Contact
 
 ## Licence
-This project is licensed under the terms of the ____ license
+This project is licensed under the terms of the 'NInguna por el momento' license
 
 ## How to cite dinsar
 
