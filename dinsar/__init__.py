@@ -10,6 +10,5 @@ import dinsar.example
 _is_folium = _importing_folium()
 
 __all__ = ["Model", "parts", "Wavelet", "example"]
-__version__ = "0.0.1"
 
 dinsar_plot_params()
