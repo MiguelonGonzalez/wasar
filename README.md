@@ -26,6 +26,8 @@ Since geopandas sometimes is hardly to install, before installing dinsar I recom
 
 ## Contact
 
+## Licence
+
 ## How to cite dinsar
 
 
