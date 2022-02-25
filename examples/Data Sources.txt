@@ -17,3 +17,6 @@ The following is a description of the data used, all of them of public use:
 	in the framework of the GEP Early Adopters Programme. This processing has been
 	carried out with the services of P-SBAS (Parallel Small BAseline Subset)
 	services, developed and integrated by CNR-IREA in the GEP.
+
+Agreggates shapefile has been manually created by a point-aggregation operation
+exectued via QGIS.

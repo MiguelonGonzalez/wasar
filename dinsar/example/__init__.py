@@ -25,6 +25,9 @@ público:
 	P-SBAS (Parallel Small BAseline Subset), desarrollados e integrados por
 	CNR-IREA en GEP.
 
+La capa con los agregados se ha generado manualmente a partir de una agregación
+de puntos mediante QGIS.
+
 """
 
 import os
