@@ -1,12 +1,37 @@
 """
 
-Módulo para el manejo del ejemplo del programa, relativo éste a una porción
-del Parque Natural de Doñana (España)
+Módulo para el manejo del ejemplo del programa, relativo éste a una zona cercana
+al Parque Natural de Doñana (España).
+
+A continuación se describen los datos utilizados, siendo todos ellos de carácter
+público:
+
+. Base de datos de piezometría. Compuesta por la información asociada a los
+	piezómetros '104080065', '104130038', '104170015', '104240124', '114150046' 
+	y '104140056', obtenidos de la Confederación Hidrográfica del Guadalquivir (*)
+	y la Base de Datos de Aguas del Instituto Geológico y Minero de
+	España (IGME , CN-CSIC; **).
+
+. Base de datos de pluviometría. Compuesta por la información asociada a las 
+	estaciones de 'Almonte', 'La_Palma_del_Condado', 'Moguer' y 'Niebla', pertenecientes
+	a la Junta de Andalucía (***).
+
+. Los conjuntos de datos (data-sets) de deformación del terreno utilizados (
+	('sentinel-asc' y 'sentinel-desc') han sido obtenidos y procesados en la
+	plataforma GEP de la ESA (European Space Agency)
+
+
+Los datos Copernicus Sentinel-1 se obtuvieron y procesaron en la plataforma GEP 
+de la ESA en el marco del GEP Early Adopters Programme.
+- Agradecemos al IGME y a la CHG por proporcionar los datos de piezometría, así 
+como a la Junta de Andalucía por suministrar los datos meteorológicos.
+
 
 """
 
 import os
 import dinsar
+
 
 _module_path = os.path.dirname(__file__)
 
@@ -42,8 +67,12 @@ def get_path(name):
 		raise ValueError(msg)
 
 def get_model():
-	"""Devuelve un modelo de ejemplo con datos relativos a una pequeña porción
-	del Parque Natural de Doñana, localizado en el sur de España."""
+	"""Devuelve un modelo de ejemplo (dinsar.Model) con datos relativos a una 
+	zona cercana al Parque Natural de Doñana, localizado en el sur de España.
+	Para más información sobre el origen de los datos utilizados en este ejemplo,
+	consulte la descripción de este módulo:
+		>>> help(dinsar.example).
+	"""
 
 	Asc = dinsar.Dataset(get_path('Sentinel-Asc'),
 						 'Asc', color='#99F550')
