@@ -15,6 +15,7 @@ Since geopandas sometimes is hardly to install, before installing dinsar I recom
 [new environment](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-with-commands).
 
 For the use of wavelet tools you will have to have installed `rpy2` package. If not installed:
+
 `pip install rpy2`
 
 ### Dependencies
@@ -30,6 +31,9 @@ For the use of wavelet tools you will have to have installed `rpy2` package. If 
 ## Quick example
 
 ## Contact
+
+You can contact me if you have any questions about the code or any further issue:
+email: miguigonn@gmail.com or directly through GitHub.
 
 ## Licence
 This project is licensed under the terms of the 'NInguna por el momento' license
