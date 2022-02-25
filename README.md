@@ -2,10 +2,10 @@
 
 ## Introduction
 
-Many regions worlwide are affected by *ground subsidence phenomena*. Abusive water withdrawal from aquiferes is one the factors than can lead to this kind of processes. Although ground motion monitoring could be performed with in-situ instruments, one of the most widely used technique in the last decades are the *Differential Interferometry Synthetic Aperture Radar* (DInSAR). The DInSAR technique consists on the superposition of numerous SAR images of the same region of the Earth, thus obtaining an image with the ground motion occurring between the SAR images acquisitions.
+Many regions worlwide are affected by **ground subsidence phenomena**. Abusive water withdrawal from aquiferes is one the factors than can lead to this kind of processes. Although ground motion monitoring could be performed with in-situ instruments, one of the most widely used technique in the last decades are the **Differential Interferometry Synthetic Aperture Radar** (DInSAR). The DInSAR technique consists on the superposition of numerous SAR images of the same region of the Earth, thus obtaining an image with the ground motion occurring between the SAR images acquisitions.
 
 
-This package allows to analyze the ground deformation of a region and to compare it with other climatic variables, such as groundwater levels or precipitation. In addition, the inclusion of *wavelet* tools allows to analyze the main periodicities of the model variables and estimate cause-effect processes.
+This package allows to analyze the ground deformation of a region and to compare it with other climatic variables, such as groundwater levels or precipitation. In addition, the inclusion of **wavelet** tools allows to analyze the main periodicities of the model variables and estimate cause-effect processes.
 
 ## Install
 
@@ -14,6 +14,8 @@ This package allows to analyze the ground deformation of a region and to compare
 Since geopandas sometimes is hardly to install, before installing dinsar I recommend the creation of a 
 [new environment](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-with-commands).
 
+For the use of wavelet tools you will have to have installed `rpy2` package. If not installed:
+`pip install rpy2`
 
 ### Dependencies
 
