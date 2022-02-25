@@ -2,27 +2,13 @@
 
 ## Introduction
 
-Una gran parte de la superficie terrestere se encuentra sometida a procesos de subsidencia.
-Uno de los principales motivos es la abusiva retirada de aguas subtérráneas. En las últimas 
-décadas DInSAR tools (Differential Interferometry Synthetic Aperture Radar) se han convertido
-en una de las mejores opciones para el estudio de la deformación del terreno.
+Many regions worlwide are affected by *ground subsidence phenomena*. Abusive water withdrawal
+from aquiferes is one the factors than can lead to this kind of processes. Although ground 
+motion monitoring could be performed with in-situ instruments, one of the most widely used technique in the last decades are the *Differential Interferometry Synthetic Aperture Radar* (DInSAR). The DInSAR technique consists on the superposition of numerous SAR images of the same region of the Earth, thus obtaining an image with the ground motion occurring between the SAR images acquisitions.
 
-Este paquete permite analizar la deformación del terreno de uná región y compararla con 
-otras variables climátias, como los niveles de agua subterránea o la precipitación. Además,
-la inclusión de herramientas wavelet permite analizar las principales periodicidades de las 
-variables del modelo y estimar procesos de causa-efecto.
 
-Many regions worlwide are affected by ground subsidence phenomena. Abusive water withdrawal
-from aquiferes is one the factors than can lead to subsidence processes. In last decades, DInSAR
-tools (Differential Interferometry Synthetic Aperture Radar) have become one of the best
-options for the study of ground deformation.
-
-This package allows to analyze the ground deformation of a region and to compare it with other climatic variables, such as 
-other climatic variables, such as groundwater levels or precipitation. In addition, the inclusion of wavelet
-the inclusion of wavelet tools allows to analyze the main periodicities of the model variables and estimate 
-model variables and to estimate cause-effect processes.
-
-Translated with www.DeepL.com/Translator (free version)
+This package allows to analyze the ground deformation of a region and to compare it with other climatic variables, such as groundwater levels or precipitation. In addition, the inclusion of *wavelet* tools allows to analyze the main periodicities of the model variables and estimate 
+cause-effect processes.
 
 ## Install
 
