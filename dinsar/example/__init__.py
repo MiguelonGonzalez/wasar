@@ -8,24 +8,22 @@ público:
 
 . Base de datos de piezometría. Compuesta por la información asociada a los
 	piezómetros '104080065', '104130038', '104170015', '104240124', '114150046' 
-	y '104140056', obtenidos de la Confederación Hidrográfica del Guadalquivir (*)
+	y '104140056', obtenidos de la Confederación Hidrográfica del Guadalquivir (1)
 	y la Base de Datos de Aguas del Instituto Geológico y Minero de
-	España (IGME , CN-CSIC; **).
+	España (IGME , CN-CSIC; (2)).
 
 . Base de datos de pluviometría. Compuesta por la información asociada a las 
-	estaciones de 'Almonte', 'La_Palma_del_Condado', 'Moguer' y 'Niebla', pertenecientes
-	a la Junta de Andalucía (***).
+	estaciones de 'Almonte', 'La_Palma_del_Condado', 'Moguer' y 'Niebla', 
+	pertenecientes a la Junta de Andalucía (3).
 
-. Los conjuntos de datos (data-sets) de deformación del terreno utilizados (
-	('sentinel-asc' y 'sentinel-desc') han sido obtenidos y procesados en la
-	plataforma GEP de la ESA (European Space Agency)
-
-
-Los datos Copernicus Sentinel-1 se obtuvieron y procesaron en la plataforma GEP 
-de la ESA en el marco del GEP Early Adopters Programme.
-- Agradecemos al IGME y a la CHG por proporcionar los datos de piezometría, así 
-como a la Junta de Andalucía por suministrar los datos meteorológicos.
-
+. Los datos SAR (Synthetic Apertur Radar) de deformación del terreno utilizados
+	('sentinel-asc' y 'sentinel-desc') han sido obtenidos de las trayectorias
+	147 y 154 del satélite Sentinel-1, pertenciente al programa Copernicus; y
+	han sido procesados a través de la plataforma GEP(Geohazards Exploitation 
+	Platform), de la ESA (European Space Agency), en el marco de 'GEP Early 
+	Adopters Programme'. Este procesado se ha realizado con los servicios de
+	P-SBAS (Parallel Small BAseline Subset), desarrollados e integrados por
+	CNR-IREA en GEP.
 
 """
 

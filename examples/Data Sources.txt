@@ -1,0 +1,19 @@
+
+The following is a description of the data used, all of them of public use:
+
+. Piezometric database. Composed by the information associated to the
+	piezometers '104080065', '104130038', '104170015', '104240124', '114150046' 
+	obtained from the Hydrographic Confederation of Guadalquivir (Spain) and the
+	Water Database of the Geological Survey of Spain (IGME , CN-CSIC).
+
+. Rainfall database. Composed by the information associated with the 'Almonte', 
+	'La_Palma_del_Condado', 'Moguer' and 'Niebla' hydrological stations, 
+	belonging to the Andalucia Regional Goverment.
+
+. The SAR (Synthetic Apertur Radar) data of ground deformation used
+	('sentinel-asc' and 'sentinel-desc') have been obtained from the 147 and 154
+	Sentinel-1 satellite tracks, which belongs to the Copernicus program; and
+	have been processed through the ESA’s Geohazards Exploitation Platform (GEP),
+	in the framework of the GEP Early Adopters Programme. This processing has been
+	carried out with the services of P-SBAS (Parallel Small BAseline Subset)
+	services, developed and integrated by CNR-IREA in the GEP.
