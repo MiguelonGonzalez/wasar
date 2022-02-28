@@ -8,17 +8,15 @@ Many regions worlwide are affected by **ground subsidence phenomena**. Abusive w
 
 ## Install
 
-You can simply install on the following way:
+Released source packages are available on [PyPi](https://pypi.org/). You can **simply install** it as:
 
 `pip install dinsar`
 
-Since geopandas dependencies could cause conflicts with other spatial packages, it's highly recommended to create first a [new environment](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-with-commands), as well as taking a look at the geopandas [installation guidelines](https://geopandas.org/en/stable/getting_started/install.html).
+Since geopandas dependencies could cause conflicts with other spatial packages, it's highly recommended to create first a [new environment](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-with-commands), as well as taking a look at the `geopandas` [installation guidelines](https://geopandas.org/en/stable/getting_started/install.html).
 
-An optional package must be installed for the use of wavelet analysis. It's `rpy2` package, and it can be simply installed via ´pip´:
+An optional package must be installed for the use of **wavelet** analysis. It's `rpy2` package, and it can be simply installed via ´pip´:
 
 `pip install rpy2`
-
-Check `rpy2` [installation documentation](https://rpy2.github.io/doc.html)
 
 ### Dependencies
 
