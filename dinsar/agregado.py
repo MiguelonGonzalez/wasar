@@ -335,7 +335,7 @@ class Agregado:
         self._info_estaciones = {'estacion':_estacion, 'bd':bd_object}
 
         if not _silent:
-            print(f"Fijada la estación: {self.estacion.name}"
+            print(f"Fijada la estación: {self.estacion.name} "
                   f"según el método '{way}'.")
         
         return self
