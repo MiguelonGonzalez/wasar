@@ -60,47 +60,6 @@ class _Part:
         """
         return hasattr(self, '_gdf')
 
-    def append_geometry(self, fname, **kwargs):
-        """ Añade una geometría (shapefile) a la base de datos, conviertiéndola
-        así en una 'geodatabase'. Es posible acceder a esta geometría a través
-        del método 'gdf'.
-        
-        Parámetros
-        ----------
-        fname: str o geopandas.GeoDataFrame
-            Ruta al shapefile (incluyendo la extensión) u objeto de tipo
-            GeoDataFrame.
-        
-        **kwargs: Opcional
-            Se pasarán a la función 'geopandas.read_file()', encargada de leer
-            la capa indicada. Útiles solo cuando fname=str.
-            
-        Devuelve
-        -------
-        None
-        
-        Ejemplo
-        -------
-        >>> bd_fname = dinsar.example.get_path('piezometria_bd')
-        >>> Piezo = dinsar.Piezometria(bd_fname, name='Piezo', sep='\t')
-        >>> shp_fname = dinsar.example.get_path('piezometria_shp')
-        >>> Piezo.append_geometry(shp_fname)
-
-        """
-        
-        if isinstance(fname, str):
-            self._gdf = gpd.read_file(fname, **kwargs)
-
-        elif isinstance(fname, gpd.GeoDataFrame):
-            self._gdf = fname
-
-        else:
-            raise TypeError(f"'{fname}' no es válido o bien se ha introducido "
-                             "un objeto que no es un geopandas.GeoDataFrame.")
-
-
-        print('Geometría añadida correctamente.')
-
     def take_point(self, point='all'):
         """ Este método selecciona los puntos indicados a través de un str o
         una lista de str, devolviendo. Devuelve un GeoDataFrame.
@@ -481,10 +440,7 @@ class Dataset(_Part):
         """ Devuelve True si este objeto no representa el Dataset original, 
         habiéndose recortado a los puntos indicados en el método 'subset'."""
         return self._is_subset
-
-    def append_geometry(self):
-        raise SystemError("No es posible utilizar este método en este objeto.")
-        
+    
     def subset(self, puntos, vm=False):
         """ Selección de uno o varios puntos del dataset. Genera una copia profunda
         del objeto (deep copy) con el dataset recortado a la selección. Todos 
@@ -712,6 +668,47 @@ class _Bd(_Part):
         else:
             raise TypeError(f"'{fname}' no es válido o bien se ha introducido "
                              "un objeto que no es un pandas.DataFrame.")
+
+    def append_geometry(self, fname, **kwargs):
+        """ Añade una geometría (shapefile) a la base de datos, conviertiéndola
+        así en una 'geodatabase'. Es posible acceder a esta geometría a través
+        del método 'gdf'.
+        
+        Parámetros
+        ----------
+        fname: str o geopandas.GeoDataFrame
+            Ruta al shapefile (incluyendo la extensión) u objeto de tipo
+            GeoDataFrame.
+        
+        **kwargs: Opcional
+            Se pasarán a la función 'geopandas.read_file()', encargada de leer
+            la capa indicada. Útiles solo cuando fname=str.
+            
+        Devuelve
+        -------
+        None
+        
+        Ejemplo
+        -------
+        >>> bd_fname = dinsar.example.get_path('piezometria_bd')
+        >>> Piezo = dinsar.Piezometria(bd_fname, name='Piezo', sep='\t')
+        >>> shp_fname = dinsar.example.get_path('piezometria_shp')
+        >>> Piezo.append_geometry(shp_fname)
+
+        """
+        
+        if isinstance(fname, str):
+            self._gdf = gpd.read_file(fname, **kwargs)
+
+        elif isinstance(fname, gpd.GeoDataFrame):
+            self._gdf = fname
+
+        else:
+            raise TypeError(f"'{fname}' no es válido o bien se ha introducido "
+                             "un objeto que no es un geopandas.GeoDataFrame.")
+
+
+        print('Geometría añadida correctamente.')
 
     @property
     def df(self):
