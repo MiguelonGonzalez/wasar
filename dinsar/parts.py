@@ -944,7 +944,8 @@ class Precipitacion(_Bd):
         own_kwargs = dict(legend=True, title='Estaciones pluviométricas')
         kwargs = _update_kwargs(own_kwargs, kwargs)
 
-        estaciones = self.estaciones if estaciones.lower() == 'all' else estaciones
+        estaciones = self.estaciones if isinstance(estaciones, str) \
+                     and estaciones.lower() == 'all' else estaciones
         
         if isinstance(estaciones, str) and estaciones.lower() == 'all':
             series = pd.DataFrame([self.take(i, values=values) for i
