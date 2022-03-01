@@ -797,9 +797,11 @@ class _Bd(_Part):
 
         name = f"{self._sensor_name}".capitalize()
 
-        points = self.elementos if points.lower() == 'all' else points
+        points = self.elementos if isinstance(points, str) \
+                                and points.lower() == 'all' else points
 
-        df = self.take(points).pivot(index='Fechas', columns='Nombre', values='Valores')
+        df = self.take(points).pivot(index='Fechas', columns='Nombre',
+                                    values='Valores')
 
         own_kwargs = dict(legend=True, title=name)
         kwargs = _update_kwargs(own_kwargs, kwargs)

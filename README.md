@@ -34,7 +34,7 @@ You can contact me directly via GitHub or via e-mail: miguigonn@gmail.com
 I have included several jupyter notebooks within 'example' folder in order to get you started with the code.
 
 ## Licence
-This project is licensed under the terms of the 'NInguna por el momento' license
+This project is licensed under the terms of the GNU General Public License v3.0
 
 ## How to cite dinsar
 
