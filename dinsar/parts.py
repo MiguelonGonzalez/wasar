@@ -572,7 +572,8 @@ class Dataset(_Part):
             warnings.warn(msg)
 
         if mean:
-            ax = self.mean().plot(label='Mean', **kwargs)
+            kwargs = _update_kwargs(dict(label='Mean'), kwargs)
+            ax = self.mean().plot(**kwargs)
             if std:
                 ax.fill_between(self.df.index, self.mean() + self.std(),
                     self.mean() - self.std(), color='#EFEFEF')
