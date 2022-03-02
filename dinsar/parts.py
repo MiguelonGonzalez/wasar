@@ -413,7 +413,7 @@ class Dataset(_Part):
 
         assert isinstance(name, str), f"'{name}' no es un str."
         
-        if self.is_subset:
+        if self.is_subset():
             self._name = name
             
         else:
@@ -435,7 +435,6 @@ class Dataset(_Part):
         """Devuelve un geopandas.GeoDataFrame con los puntos del dataset."""
         return self._gdf
     
-    @property
     def is_subset(self):
         """ Devuelve True si este objeto no representa el Dataset original, 
         habiéndose recortado a los puntos indicados en el método 'subset'."""
@@ -475,7 +474,7 @@ class Dataset(_Part):
         >>> subset.puntos               # Los puntos del Dataset se limitan a la selección.
         ['352866', '352918', '353090', '353378']
         
-        >>> subset.is_subset   # ¿es 'subset' un recorte del Dataset original?
+        >>> subset.is_subset()   # ¿es 'subset' un recorte del Dataset original?
         >>> True
         """
 
@@ -779,7 +778,7 @@ class _Bd(_Part):
             
         **kwargs Opcional
             Se pasan a la función de representación de matplotlib a través
-            de pandas: DataFrame.plot(**kwargs)
+            de pandas: DataFrame.plot(**kwargs).
             
         Devuelve
         --------
@@ -798,7 +797,7 @@ class _Bd(_Part):
                                 and points.lower() == 'all' else points
 
         df = self.take(points).pivot(index='Fechas', columns='Nombre',
-                                    values='Valores')
+                                     values='Valores')
 
         own_kwargs = dict(legend=True, title=name)
         kwargs = _update_kwargs(own_kwargs, kwargs)
