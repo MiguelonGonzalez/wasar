@@ -8,7 +8,7 @@ from functools import wraps
 import matplotlib.pyplot as plt
 import matplotlib as mpl
 
-from ..plot import _b, dinsar_plot_params
+from ..plot import _b, _dinsar_plot_params
 from ._utils import _filtro_agregados, _update_kwargs
 
 

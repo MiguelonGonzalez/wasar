@@ -36,7 +36,7 @@ def _get_datasets_cmap(gdf):
     import matplotlib.colors as colors
     return colors.ListedColormap(gdf['Color'].unique().tolist())
 
-def dinsar_plot_params(deactivate=False):
+def _dinsar_plot_params(deactivate=False):
     """Activación de los parámetros por defecto de dinsar en la representación 
     gráfica. Son el resultado de la customización de los parámetros por defecto 
     de Matplotlib (rcParams).
@@ -106,7 +106,7 @@ def _mapa(gdf, own_kwargs, user_kwargs, basemap, savefig=False):
     los cuales siempre primarán sobre los propios de dinsar (own_kwargs).
     """
 
-    dinsar_plot_params(deactivate=True)
+    _dinsar_plot_params(deactivate=True)
     basemap = _checking_folium(basemap)
     kwargs = _update_kwargs(own_kwargs, user_kwargs)
     LayerControl = kwargs['LayerControl']
@@ -133,7 +133,7 @@ def _mapa(gdf, own_kwargs, user_kwargs, basemap, savefig=False):
         if savefig:
             mymap.save("Mapa.html")
 
-        dinsar_plot_params()
+        _dinsar_plot_params()
 
         return mymap
 
@@ -168,7 +168,7 @@ def _mapa(gdf, own_kwargs, user_kwargs, basemap, savefig=False):
         if savefig:
             ax.figure.savefig(f"{self.name}.png")
 
-        dinsar_plot_params()
+        _dinsar_plot_params()
 
         return ax
 

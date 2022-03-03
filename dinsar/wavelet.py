@@ -31,7 +31,7 @@ import matplotlib.pyplot as plt
 import os, tempfile, shutil
 
 from .utils._utils import _update_kwargs
-from .plot import dinsar_plot_params
+from .plot import _dinsar_plot_params
 
 try:
     from rpy2.robjects import r
@@ -141,7 +141,7 @@ class Wavelet:
         shutil.rmtree(self.tempdir)
 
         # A los valores parámetros por defecto de matplotlib en dinsar:
-        dinsar_plot_params()
+        _dinsar_plot_params()
 
     def _check_Series(self, ts):
         """Comprueba que la serie temporal (ts) sea del tipo pd.Series. Si es de

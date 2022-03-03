@@ -9,7 +9,7 @@ import geopandas as gpd
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 
-from .plot import  _add_basemap, _colorbar, dinsar_plot_params, _get_datasets_cmap
+from .plot import  _add_basemap, _colorbar, _dinsar_plot_params, _get_datasets_cmap
 from .utils._utils import _update_kwargs, _importing_folium, _checking_folium
 
 if _importing_folium:
@@ -450,7 +450,8 @@ class Agregado:
             msg = "El nombre de alguna trayectoria es incorrecto."
             assert all([i in self.datasets for i in subsets]), msg
 
-            for dataset in self._tr_dict.values():
+            datasets_list = [self._tr_dict.get(i) for i in subsets]
+            for dataset in datasets_list:
                 ts = dataset.mean()
                 ax1.plot(ts.index.map(to_mdates),ts.values,
                          color=dataset.color, label=ts.name)
@@ -462,6 +463,8 @@ class Agregado:
             ts = dataset.mean()
             ax1.plot(ts.index.map(to_mdates), ts.values,
                      color=dataset.color, label=dataset.name)
+
+            subsets = [subsets]  # Lo convierto en lista para facilitar su gestión.
 
         else:
             raise TypeError('Válidos solo str o list.')
@@ -543,7 +546,7 @@ class Agregado:
         ax1.set_title(f"Agregado {self._gdf['Agregado'].values[0]}",
             fontsize=24, pad=15)
 
-        # ------------------- RÓTULO Y DE LOS DATASETS -------------------------
+        # ------------------- RÓTULO 'Y' DE LOS DATASETS -----------------------
         # Añadir unidades si los datasets indicados presentan las mismas
         d_same_units = len(set([self._tr_dict.get(i).units for i in subsets])) == 1
         if isinstance(subsets, str) or (isinstance(subsets, list) and d_same_units):
@@ -715,7 +718,7 @@ class Agregado:
         # **********************************************************************
         else:
 
-            dinsar_plot_params(deactivate=True)
+            _dinsar_plot_params(deactivate=True)
 
             pol_style = dict(facecolor='None', ec='k', lw=0.8)
 
@@ -761,7 +764,7 @@ class Agregado:
             if savefig:
                 ax.figure.savefig('Mapa.png')
 
-            dinsar_plot_params()
+            _dinsar_plot_params()
 
             return ax
     
