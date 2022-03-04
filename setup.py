@@ -19,7 +19,7 @@ setup(
                   'matplotlib>=3.4.2',
                   'folium'
                    ],
-  packages=find_packages(where="dinsar.dinsar"),                 
+  packages=find_packages(),                 
   classifiers=[
               'Programming Language :: Python',
               'Programming Language :: Python :: 3.8',
