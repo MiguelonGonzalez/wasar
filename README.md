@@ -41,6 +41,12 @@ This project is licensed under the terms of the GNU General Public License v3.0
 
 ## Example
 
+    >>> import dinsar
+    >>> Model = dinsar.example.get_model()
+
+    >>> mymap = Model.mapa(LayerControl=False)
+    >>> Model.get('Asc').mapa(m=mymap)
+![map](https://user-images.githubusercontent.com/75794654/156733794-922a0bfe-e42b-4f4e-93fa-bf0cdcf71511.png)
 
 
 

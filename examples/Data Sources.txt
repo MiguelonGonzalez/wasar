@@ -4,7 +4,7 @@ The following is a description of the data used, all of them of public use:
 . Piezometric database. Composed by the information associated to the
 	piezometers '104080065', '104130038', '104170015', '104240124', '114150046' 
 	obtained from the Hydrographic Confederation of Guadalquivir (Spain) and the
-	Water Database of the Geological Survey of Spain (IGME , CN-CSIC).
+	Water Database of the Geological Survey of Spain (IGME-CSIC).
 
 . Rainfall database. Composed by the information associated with the 'Almonte', 
 	'La_Palma_del_Condado', 'Moguer' and 'Niebla' hydrological stations, 
