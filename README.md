@@ -28,11 +28,13 @@ An optional package must be installed for the use of **wavelet** analysis. It's 
 
 ## Contact
 
-You can contact me directly via GitHub or via e-mail: miguigonn@gmail.com
+We are Miguel González Jiménez and Carolina Guardiola Albert. You can contact us just via GitHub or through our e-mails: miguigonn@gmail.com and 'correo_de_Carolina'
     
 ## Get started
 
-I have included several jupyter notebooks within 'example' folder in order to get you started with the code.
+In the 'example' folder you can find several **tutorials** that will help you get started with the program. Also, the functions, classes and modules are fully explained, so if you have doubts about their behavior, just use the built-in `help`, the `?` mark or the tab button in Jupyter Notebook.
+
+Example:    `help(dinsar.Dataset.find_element)` or `dinsar.Dataset.find_element?` or `dinsar.Dataset.find_element` + `.` + *`press tab`*
 
 ## Licence
 This project is licensed under the terms of the GNU General Public License v3.0
@@ -48,9 +50,18 @@ This project is licensed under the terms of the GNU General Public License v3.0
     >>> Model.get('Asc').mapa(m=mymap)
 ![map](https://user-images.githubusercontent.com/75794654/156733794-922a0bfe-e42b-4f4e-93fa-bf0cdcf71511.png)
 
+A very useful tool of `dinsar` are **wavelet tools**, which allow to perform frequency analysis of the time series.
 
+The following example shows the **common periodicities** between a rainfall station and a piezometer, being the **annual** frequency the main common one.
 
+    >>> from dinsar import Wavelet
+    >>> Doñana = dinsar.example.get_model()
 
+    >>> piezometer = Doñana.get('Piezo_bbdd').take('104080065')
+    >>> piezometer = piezometer.pivot(index='Fechas',columns='Nombre', values='Valores')
 
+    >>> rainfall = Doñana.get('P').take('Almonte')
 
+    >>> Wavelet('M', piezometer, rainfall, dt=2, dj=1/20, lowerPeriod=2, upperPeriod=30)
 
+![wavelet](https://user-images.githubusercontent.com/75794654/156804199-e8ec12db-75b8-4fce-8a47-e06a74044843.png)
