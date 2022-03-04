@@ -32,7 +32,7 @@ We are Miguel González Jiménez and Carolina Guardiola Albert. You can contact 
     
 ## Get started
 
-In the 'example' folder you can find several tutorials that will help you get started with the program. Also, the functions, classes and modules are fully explained, so if you have doubts about their behavior, just use the built-in `help`, the `?` mark or the tab button in Jupyter Notebook.
+In the 'example' folder you can find several **tutorials** that will help you get started with the program. Also, the functions, classes and modules are fully explained, so if you have doubts about their behavior, just use the built-in `help`, the `?` mark or the tab button in Jupyter Notebook.
 
 Example:    `help(dinsar.Dataset.find_element)` or `dinsar.Dataset.find_element?` or `dinsar.Dataset.find_element` + `.` + *`press tab`*
 
