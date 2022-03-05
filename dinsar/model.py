@@ -441,9 +441,12 @@ class Model:
         else:
             gdf = self.gdf.set_index('Agregado').loc[list(args)].reset_index()
 
-        own_kwargs = dict(tooltip='Agregado',
-            style_kwds=dict(color='black', fillColor='#F39AB8',
-                fill=True, weight=1), name='Agregados')
+        if basemap:
+            own_kwargs = dict(tooltip='Agregado', name='Agregados',
+                              style_kwds=dict(color='black', fillColor='#F39AB8',
+                              fill=True, weight=1))
+        else:
+            own_kwargs = dict()
 
         own_kwargs['LayerControl'] = LayerControl
 

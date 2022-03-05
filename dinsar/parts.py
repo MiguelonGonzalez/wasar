@@ -25,8 +25,14 @@ __all__ = ['Dataset', 'Piezometria', 'Precipitacion', 'DataBase']
 class _Part:
     """ Clase base de las partes del modelo. """  
 
-    def __init__(self, units=None):
+    def __init__(self, units=None, color=None):
         self._units = units
+
+        if not color:
+            self.color = random_color()
+        
+        else:
+            self.color = _check_color(color)
     
     @property
     def name(self):
@@ -362,7 +368,7 @@ class Dataset(_Part):
     
     def __init__(self, fname, name, color=None, units='cm', **kwargs):
 
-        super().__init__(units=units)
+        super().__init__(units=units, color=color)
 
         self._name = name
         shape = gpd.read_file(fname, **kwargs)
@@ -393,12 +399,6 @@ class Dataset(_Part):
         _df.set_index('Fechas', inplace=True)
         self._df = _df
 
-        if not color:
-            self.color = random_color()
-        
-        else:
-            self.color = _check_color(color)
-            
         self._is_subset = False
     
     def __call__(self):
@@ -620,7 +620,7 @@ class _Bd(_Part):
     def __init__(self, fname, name, date_format=None, color=None,
                        units=None, **kwargs):
 
-        super().__init__(units=units)
+        super().__init__(units=units, color=color)
 
         _df = self._open_file(fname, **kwargs)
         columnas = ['Nombre','Fechas','Valores']
@@ -642,7 +642,6 @@ class _Bd(_Part):
         
         self._df = _df
         self._name = name
-        self.color = color
         
     def __call__(self, elemento):
         return self.take(elemento)
