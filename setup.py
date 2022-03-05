@@ -7,12 +7,12 @@ setup(
   
   name="dinsar",
   version="0.0.1",
-  author="Miguel González Jiménez",
-  author_email="miguigonn@gmail.com",
+  author="Miguel González Jiménez & Carolina Guardiola Albert",
+  author_email="miguigonn@gmail.com, email_carolina",
   description="Python package for analyzing DInSAR time series.",
   long_description=long_description,
   license="GNU GENERAL PUBLIC LICENSE Version 3",
-  url="https://github.com/MiguelonGonzalez/dinsar/tutorials",
+  url="https://github.com/MiguelonGonzalez/dinsar",
   install_requires=[
                   "geopandas>=0.10.2",
                   'pandas>=1.3.2',
