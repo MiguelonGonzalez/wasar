@@ -5,7 +5,7 @@ This package allows to analyze the ground deformation of a region and to compare
 
 ## Introduction
 
-Many regions worlwide are affected by **ground subsidence phenomena**. Abusive water withdrawal from aquiferes is one the factors than can lead to this kind of processes. Although ground motion monitoring could be performed with in-situ instruments, one of the most widely used technique in the last decades are the **Differential Interferometry Synthetic Aperture Radar** (DInSAR). The DInSAR technique consists on the superposition of numerous SAR images of the same region of the Earth, thus obtaining an image with the ground motion occurring between the SAR images acquisitions. Analyzing multiple of those images of a given region and comparing it with the groundwater levels (or other variables) is the manin purpose of this program.
+Many regions worldwide are affected by **ground subsidence phenomena**. Abusive water withdrawal from aquifers is one the main factors than can lead to this kind of processes. Although ground motion monitoring can be performed with in-situ instruments, one of the most widely used techniques in the last decades is the **Differential Interferometry Synthetic Aperture Radar** (DInSAR). The DInSAR technique consists on the superposition of numerous SAR images of the same region of the Earth, thus obtaining an image of the ground motion occurring between the SAR images acquisitions. Analyzing multiple time series of ground movement in a given region, and comparing them with groundwater level variatons (or other variables), are the manin purposes of the present program.
 
 ## Install
 
@@ -28,11 +28,11 @@ An optional package must be installed for the use of **wavelet** analysis. It's 
 
 ## Contact
 
-We are Miguel González Jiménez and Carolina Guardiola Albert. You can contact us just via GitHub or through our e-mails: miguigonn@gmail.com and 'correo_de_Carolina'
+We are Miguel González Jiménez and Carolina Guardiola Albert. You can contact us just via GitHub or through our e-mails: miguigonn@gmail.com and c.guardiola@igme.es.
     
 ## Get started
 
-In the 'example' folder you can find several **tutorials** that will help you get started with the program. Also, the functions, classes and modules are fully explained, so if you have doubts about their behavior, just use the built-in `help`, the `?` mark or the tab button in Jupyter Notebook.
+In the 'example' folder you can find several **tutorials** that will help you to get started with the program. Also, the functions, classes and modules are fully explained in Spanish, so if you have doubts about their behavior, just use the built-in `help`, the `?` mark or the tab button in Jupyter Notebook.
 
 Example:    `help(dinsar.Dataset.find_element)` or `dinsar.Dataset.find_element?` or `dinsar.Dataset.find_element` + `.` + *`press tab`*
 
