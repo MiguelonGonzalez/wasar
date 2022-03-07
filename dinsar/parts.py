@@ -80,7 +80,7 @@ class _Part:
         
         Ejemplo
         -------
-        >>> Doñana = dinsar.example.get_model()
+        >>> Doñana = wasar.example.get_model()
         >>> Doñana.get('Asc').take_point(['352866', '352918'])
         """
         
@@ -132,7 +132,7 @@ class _Part:
         # Obtención de los puntos del Dataset 'Ascending' presentes en un radio 
             de 15 Km a la redonda desde la estación pluviométrica de 'Almonte':
                 
-        >>> Doñana = dinsar.example.get_model()
+        >>> Doñana = wasar.example.get_model()
         >>> xy = Doñana.get('P').xy('Almonte')
         >>> Doñana.get('Asc').find_element(xy, way='radius', radius=15)
             
@@ -184,7 +184,7 @@ class _Part:
         Ejemplo
         -------
         
-        >>> Doñana = dinsar.example.get_model()
+        >>> Doñana = wasar.example.get_model()
         
         1. Selección del piezómetro más cercano a la estación 'Almonte':
         # Acceso a las coordenadas del punto (objeto de tipo shapely.Point)
@@ -268,7 +268,7 @@ class _Part:
         
         Ejemplo
         -------
-        >>> Doñana = dinsar.example.get_model()
+        >>> Doñana = wasar.example.get_model()
         >>> Doñana.get('P').mapa(['Moguer', 'Niebla'])
         
         """
@@ -326,7 +326,7 @@ class Dataset(_Part):
            
            Importante: la descomposición vertical de los puntos únicamente
            funciona cuando existe la columna 'cosU'.
-           Ver más: dinsar.zoom.Subset.vm
+           Ver más: wasar.zoom.Subset.vm
     
     Este formato tiende a seguir el formato de los ficheros de salida del 
     procesado PSBAS (Parallel Small BAseline Subset) en la plataforma
@@ -347,12 +347,12 @@ class Dataset(_Part):
             
     Devuelve
     -------
-    Objeto dinsar.parts.Dataset
+    Objeto wasar.parts.Dataset
     
     Ejemplos
     --------
-    >>> fname = dinsar.example.get_path('sentinel-asc')
-    >>> Asc = dinsar.Dataset(fname, name='Asc', color='#99F550')   
+    >>> fname = wasar.example.get_path('sentinel-asc')
+    >>> Asc = wasar.Dataset(fname, name='Asc', color='#99F550')   
     
     Referencias
     ----------
@@ -461,7 +461,7 @@ class Dataset(_Part):
              
         Devuelve
         -------
-        dinsar.parts.Dataset
+        wasar.parts.Dataset
         
         Ejemplos
         --------
@@ -689,9 +689,9 @@ class _Bd(_Part):
         
         Ejemplo
         -------
-        >>> bd_fname = dinsar.example.get_path('piezometria_bd')
-        >>> Piezo = dinsar.Piezometria(bd_fname, name='Piezo', sep='\t')
-        >>> shp_fname = dinsar.example.get_path('piezometria_shp')
+        >>> bd_fname = wasar.example.get_path('piezometria_bd')
+        >>> Piezo = wasar.Piezometria(bd_fname, name='Piezo', sep='\t')
+        >>> shp_fname = wasar.example.get_path('piezometria_shp')
         >>> Piezo.append_geometry(shp_fname)
 
         """
@@ -734,7 +734,7 @@ class _Bd(_Part):
         
         Ejemplo
         -------
-        >>> Doñana = dinsar.example.get_model()
+        >>> Doñana = wasar.example.get_model()
         >>> Doñana.get('Piezo_bbdd').take(['104080065', '104130038'])
         """
 
@@ -786,7 +786,7 @@ class _Bd(_Part):
             
         Ejemplo
         -------
-        >>> Doñana = dinsar.example.get_model()
+        >>> Doñana = wasar.example.get_model()
         >>> Piezo = Doñana.get('Piezo_bbdd')
         >>> Piezo.plot()
         """
@@ -835,12 +835,12 @@ class Precipitacion(_Bd):
         
     Devuelve
     --------
-    dinsar.parts.Precipitacion
+    wasar.parts.Precipitacion
     
     Ejemplo
     -------
-    >>> fname = dinsar.example.get_path('precipitacion_bd')
-    >>> Preci = dinsar.Precipitacion(fname, 'P', sep='\t')
+    >>> fname = wasar.example.get_path('precipitacion_bd')
+    >>> Preci = wasar.Precipitacion(fname, 'P', sep='\t')
     
     """
 
@@ -876,7 +876,7 @@ class Precipitacion(_Bd):
         
         Ejemplo
         -------
-        >>> Doñana = dinsar.example.get_model()
+        >>> Doñana = wasar.example.get_model()
         >>> Doñana.get('P').take('Almonte')
         
         """
@@ -926,7 +926,7 @@ class Precipitacion(_Bd):
             
         Ejemplo
         -------
-        >>> Doñana = dinsar.example.get_model()
+        >>> Doñana = wasar.example.get_model()
         >>> Precipi = Doñana.get('P')
         >>> Precipi.plot(['Moguer', 'Niebla'])
         """
@@ -987,12 +987,12 @@ class Piezometria(_Bd):
         
     Devuelve
     --------
-    dinsar.parts.Piezometria
+    wasar.parts.Piezometria
     
     Ejemplo
     -------
-    >>> fname = dinsar.example.get_path('piezometria_bd')
-    >>> Piezo = dinsar.Piezometria(fname, 'Piezo_bd', sep='\t')
+    >>> fname = wasar.example.get_path('piezometria_bd')
+    >>> Piezo = wasar.Piezometria(fname, 'Piezo_bd', sep='\t')
     
     """
     
@@ -1032,7 +1032,7 @@ class DataBase(_Bd):
         
     Devuelve
     --------
-    dinsar.parts.DataBase
+    wasar.parts.DataBase
     
     """
     

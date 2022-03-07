@@ -31,7 +31,7 @@ import matplotlib.pyplot as plt
 import os, tempfile, shutil
 
 from .utils._utils import _update_kwargs
-from .plot import _dinsar_plot_params
+from .plot import _wasar_plot_params
 
 try:
     from rpy2.robjects import r
@@ -42,8 +42,8 @@ except (ImportError, ModuleNotFoundError):
 
 def get_wavelet_legend():
     """Devuelve una imagen con la leyenda de la XWT y WTC."""
-    dinsar_fname = os.path.realpath(__file__)
-    fname = dinsar_fname.replace('wavelet.py','utils\\Legend.png')
+    wasar_fname = os.path.realpath(__file__)
+    fname = wasar_fname.replace('wavelet.py','utils\\Legend.png')
     
     fig, ax = plt.subplots()
     pic = plt.imread(fname)
@@ -140,8 +140,8 @@ class Wavelet:
         # Borrar carpeta temporal:
         shutil.rmtree(self.tempdir)
 
-        # A los valores parámetros por defecto de matplotlib en dinsar:
-        _dinsar_plot_params()
+        # A los valores parámetros por defecto de matplotlib en wasar:
+        _wasar_plot_params()
 
     def _check_Series(self, ts):
         """Comprueba que la serie temporal (ts) sea del tipo pd.Series. Si es de

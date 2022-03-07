@@ -11,7 +11,7 @@ Many regions worldwide are affected by **ground subsidence phenomena**. Abusive 
 
 Released source packages are available on [PyPi](https://pypi.org/). You can **simply install** it as:
 
-`pip install dinsar`
+`pip install wasar`
 
 Since geopandas dependencies could cause conflicts with other spatial packages, it's highly recommended to create first a [new environment](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-with-commands), as well as taking a look at the `geopandas` [installation guidelines](https://geopandas.org/en/stable/getting_started/install.html).
 
@@ -34,28 +34,28 @@ We are Miguel González Jiménez and Carolina Guardiola Albert. You can contact 
 
 In the *example* folder you can find several **tutorials** that will help you to get started with the program. Also, the functions, classes and modules are fully explained in Spanish, so if you have doubts about their behavior, just use the built-in `help`, the `?` mark or the tab button in Jupyter Notebook.
 
-Example:    `help(dinsar.Dataset.find_element)` or `dinsar.Dataset.find_element?` or `dinsar.Dataset.find_element` + `.` + *`press tab`*
+Example:    `help(wasar.Dataset.find_element)` or `wasar.Dataset.find_element?` or `wasar.Dataset.find_element` + `.` + *`press tab`*
 
 ## Licence
 This project is licensed under the terms of the GNU General Public License v3.0
 
-## How to cite dinsar
+## How to cite wasar
 
 ## Example
 
-    >>> import dinsar
-    >>> Model = dinsar.example.get_model()
+    >>> import wasar
+    >>> Model = wasar.example.get_model()
 
     >>> mymap = Model.mapa(LayerControl=False)
     >>> Model.get('Asc').mapa(m=mymap)
 ![map](https://user-images.githubusercontent.com/75794654/156733794-922a0bfe-e42b-4f4e-93fa-bf0cdcf71511.png)
 
-A very useful tool of `dinsar` are **wavelet tools**, which allow to perform frequency analysis of the time series.
+A very useful tool of `wasar` are **wavelet tools**, which allow to perform frequency analysis of the time series.
 
 The following example shows the **common periodicities** between a rainfall station and a piezometer, being the **annual** frequency the main common one.
 
-    >>> from dinsar import Wavelet
-    >>> Doñana = dinsar.example.get_model()
+    >>> from wasar import Wavelet
+    >>> Doñana = wasar.example.get_model()
 
     >>> piezometer = Doñana.get('Piezo_bbdd').take('104080065')
     >>> piezometer = piezometer.pivot(index='Fechas',columns='Nombre', values='Valores')

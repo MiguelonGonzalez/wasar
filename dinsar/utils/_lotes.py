@@ -8,7 +8,7 @@ from functools import wraps
 import matplotlib.pyplot as plt
 import matplotlib as mpl
 
-from ..plot import _b, _dinsar_plot_params
+from ..plot import _b, _wasar_plot_params
 from ._utils import _filtro_agregados, _update_kwargs
 
 
@@ -36,7 +36,7 @@ def trier(func):
 
 
 class _Lotes:
-    """ Clase privada para la ejecución del método 'porLotes' de dinsar.Model.
+    """ Clase privada para la ejecución del método 'porLotes' de wasar.Model.
         Las definición de los parámetros de entrada de esta clase figuran en
         el __doc__ de Model.porLotes.
     """

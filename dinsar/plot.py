@@ -1,7 +1,7 @@
 """
 
 Módulo que contiene la mayor parte de las herramientas sobre la que se apoya 
-la reprsentación gráfica, tanto temporal como espacial, de dinsar.
+la reprsentación gráfica, tanto temporal como espacial, de wasar.
 
 """
 
@@ -36,8 +36,8 @@ def _get_datasets_cmap(gdf):
     import matplotlib.colors as colors
     return colors.ListedColormap(gdf['Color'].unique().tolist())
 
-def _dinsar_plot_params(deactivate=False):
-    """Activación de los parámetros por defecto de dinsar en la representación 
+def _wasar_plot_params(deactivate=False):
+    """Activación de los parámetros por defecto de wasar en la representación 
     gráfica. Son el resultado de la customización de los parámetros por defecto 
     de Matplotlib (rcParams).
 
@@ -103,10 +103,10 @@ def _mapa(gdf, own_kwargs, user_kwargs, basemap, savefig=False):
     Función privada para la representación espacial del gdf (GeoDataFrame) de
     entrada, usando folium (basemap=True) o no (False), guardando la figura
     (savefig=True) o no, y añadiendo los **kwargs que el usuario especifique,
-    los cuales siempre primarán sobre los propios de dinsar (own_kwargs).
+    los cuales siempre primarán sobre los propios de wasar (own_kwargs).
     """
 
-    _dinsar_plot_params(deactivate=True)
+    _wasar_plot_params(deactivate=True)
     basemap = _checking_folium(basemap)
     kwargs = _update_kwargs(own_kwargs, user_kwargs)
     LayerControl = kwargs['LayerControl']
@@ -133,7 +133,7 @@ def _mapa(gdf, own_kwargs, user_kwargs, basemap, savefig=False):
         if savefig:
             mymap.save("Mapa.html")
 
-        _dinsar_plot_params()
+        _wasar_plot_params()
 
         return mymap
 
@@ -168,7 +168,7 @@ def _mapa(gdf, own_kwargs, user_kwargs, basemap, savefig=False):
         if savefig:
             ax.figure.savefig(f"{self.name}.png")
 
-        _dinsar_plot_params()
+        _wasar_plot_params()
 
         return ax
 

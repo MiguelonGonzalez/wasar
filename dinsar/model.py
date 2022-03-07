@@ -31,10 +31,10 @@ class Model:
     pluviométrica o de cualquier otra naturaleza.
 
     Se pueden definir y añadir al modelo tantas partes como se desee, encontrándose
-    las especificaciones de su definición en el módulo 'dinsar.parts', siendo 
+    las especificaciones de su definición en el módulo 'wasar.parts', siendo 
     también posible acceder a esta información desde la ayuda de cada una de ellas:
 
-    >>> help(dinsar.Piezometria)
+    >>> help(wasar.Piezometria)
 
     El sistema de referencia de coordenadas (SRC, o CRS por sus siglas en 
     inglés) de la capa de entrada dictará el SRC del proyecto. Las partes añadidas
@@ -55,13 +55,13 @@ class Model:
 
     Devuelve
     -------
-    dinsar.Model
+    wasar.Model
 
     Ejemplo
     --------
 
-    >>> fname = dinsar.example.get_path('Agregados')
-    >>> Doñana = dinsar.Model(fname)
+    >>> fname = wasar.example.get_path('Agregados')
+    >>> Doñana = wasar.Model(fname)
 
     """
 
@@ -182,7 +182,7 @@ class Model:
 
         Ejemplo
         --------
-        >>> Doñana = dinsar.example.get_model()
+        >>> Doñana = wasar.example.get_model()
         >>> Doñana.reproyect(4326)
         >>> ( Doñana.is_all_crs_equal() and Doñana.crs == 4326 )
         >>> True
@@ -240,7 +240,7 @@ class Model:
 
         Parámetros
         ----------
-        part Dataset, Piezometria, Precipitacion, DataBase (en dinsar.parts)
+        part Dataset, Piezometria, Precipitacion, DataBase (en wasar.parts)
 
         Devuelve
         -------
@@ -251,11 +251,11 @@ class Model:
         Adición de un Dataset al modelo. Seguir el mismo proceso para añadir
         el resto de partes.
 
-        >>> fname = dinsar.example.get_path('agregados')
-        >>> Doñana = dinsar.Model(fname)
+        >>> fname = wasar.example.get_path('agregados')
+        >>> Doñana = wasar.Model(fname)
 
-        >>> asc_fname = dinsar.example.get_path('sentinel-asc')
-        >>> Asc = dinsar.Dataset(asc_fname, name='Asc')
+        >>> asc_fname = wasar.example.get_path('sentinel-asc')
+        >>> Asc = wasar.Dataset(asc_fname, name='Asc')
 
         >>> Doñana.append(Asc)        
 
@@ -357,12 +357,12 @@ class Model:
 
         Devuelve
         -------
-        dinsar.agregado.Agregado
+        wasar.agregado.Agregado
 
         Ejemplo
         --------
 
-        >>> Doñana = dinsar.example.get_model()
+        >>> Doñana = wasar.example.get_model()
 
         >>> Doñana.agregado('1')       # Estudio del agregado 1
         >>> Doñana.agregado('2','4')   # Estudio conjunto de los agregados 2 y 4
@@ -424,7 +424,7 @@ class Model:
 
         Ejemplo
         -------
-        >>> Doñana = dinsar.example.get_model()
+        >>> Doñana = wasar.example.get_model()
         >>> Doñana.mapa()         # Visualización de todos los agregados.
         >>> Doñana.mapa('3')      # Visualización del agregado '3'
 
@@ -552,7 +552,7 @@ class Model:
         mantenido la misma estación pluviométrica de referencia en todos ellos
         ('Almonte').
 
-        >>> Doñana = dinsar.example.get_model()
+        >>> Doñana = wasar.example.get_model()
         >>> xwt_kw = dict(freq='M',series=['Asc', 'piezo'])    
         >>> Doñana.porLotes(agregados=['2','4','5'],
                             estacion_kw=dict(estacion='Almonte'),

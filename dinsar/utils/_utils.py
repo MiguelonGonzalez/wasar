@@ -8,7 +8,7 @@ from warnings import warn
 
 
 def _update_kwargs(own_kwargs, kwargs):
-    """ Actualizar los **kwargs propios de dinsar (own_kwargs) con los **kwargs
+    """ Actualizar los **kwargs propios de wasar (own_kwargs) con los **kwargs
     introducidos por el usuario, haciendo primar éstos últimos.
     Así se logra evitar el error >>> TypeError: 'multiple values for argument'.
     """
@@ -79,7 +79,7 @@ def _checking_folium(basemap):
     """Comprueba que exista la librería folium y, de no ser así, fija 'basemap'
     a False para que se utilice Matplotlib."""
 
-    from dinsar import _is_folium
+    from wasar import _is_folium
     if not _is_folium and basemap:
         warn("'basemap' fijado a False. La librería folium no está instalada.\n"
              "La representación se realizará mediante matplotlib.")

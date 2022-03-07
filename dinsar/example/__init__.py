@@ -31,7 +31,7 @@ de puntos mediante QGIS.
 """
 
 import os
-import dinsar
+import wasar
 
 
 _module_path = os.path.dirname(__file__)
@@ -68,25 +68,25 @@ def get_path(name):
 		raise ValueError(msg)
 
 def get_model():
-	"""Devuelve un modelo de ejemplo (dinsar.Model) con datos relativos a una 
+	"""Devuelve un modelo de ejemplo (wasar.Model) con datos relativos a una 
 	zona cercana al Parque Natural de Doñana, localizado en el sur de España.
 	Para más información sobre el origen de los datos utilizados en este ejemplo,
 	consulte la descripción de este módulo:
-		>>> help(dinsar.example).
+		>>> help(wasar.example).
 	"""
 
-	Asc = dinsar.Dataset(get_path('Sentinel-Asc'),
+	Asc = wasar.Dataset(get_path('Sentinel-Asc'),
 						 'Asc', color='#99F550')
-	Desc = dinsar.Dataset(get_path('Sentinel-Desc'),
+	Desc = wasar.Dataset(get_path('Sentinel-Desc'),
 						  'Desc', color='#FBA608')
 
-	bbdd = dinsar.Piezometria(get_path('Piezometria_bd'), 'Piezo_bbdd', sep='\t')
+	bbdd = wasar.Piezometria(get_path('Piezometria_bd'), 'Piezo_bbdd', sep='\t')
 	bbdd.append_geometry(get_path('Piezometria_shp'))
 
-	precipi = dinsar.Precipitacion(get_path('Precipitacion_bd'), 'P', sep='\t')
+	precipi = wasar.Precipitacion(get_path('Precipitacion_bd'), 'P', sep='\t')
 	precipi.append_geometry(get_path('Precipitacion_shp'))
 
-	Doñana = dinsar.Model(get_path('Agregados'))
+	Doñana = wasar.Model(get_path('Agregados'))
 	[Doñana.append(i) for i in [Asc, Desc, bbdd, precipi]]
 
 	return Doñana

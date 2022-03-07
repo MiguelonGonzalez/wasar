@@ -9,7 +9,7 @@ import geopandas as gpd
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 
-from .plot import  _add_basemap, _colorbar, _dinsar_plot_params, _get_datasets_cmap
+from .plot import  _add_basemap, _colorbar, _wasar_plot_params, _get_datasets_cmap
 from .utils._utils import _update_kwargs, _importing_folium, _checking_folium
 
 if _importing_folium:
@@ -68,7 +68,7 @@ class Agregado:
         """Devuelve el área del agregado en hectáreas, asumiendo que la unidad
         del SRC del proyecto son los metros.
         Puedes comprobar el SRC de las capas del modelo de la siguiente manera:
-        >>> Doñana = dinsar.example.get_model()
+        >>> Doñana = wasar.example.get_model()
         >>> Doñana.crs
         """
         return self.gdf.area/10000
@@ -152,7 +152,7 @@ class Agregado:
         en el agregado. En esta ocasión el argumento 'vm' se debería de indicar
         en la definición del agregado.
 
-        Más información: >>> help(dinsar.Dataset.subset)
+        Más información: >>> help(wasar.Dataset.subset)
 
         Parámetros
         ----------
@@ -163,14 +163,14 @@ class Agregado:
 
         Devuelve
         --------
-        dinsar.Dataset
+        wasar.Dataset
 
         Ejemplo
         -------
         Obtención del dataset 'sentinel-asc' (alias: 'Asc') con únicamente los
         puntos presentes en el agregado '2' del modelo.
 
-        >>> Doñana = dinsar.example.get_model()
+        >>> Doñana = wasar.example.get_model()
         >>> A2 = Doñana.agregado('2').subset('Asc')
 
         """
@@ -184,7 +184,7 @@ class Agregado:
         Se basa en el método 'find_element' del objeto Piezometría, siendo 
         'xy' el centroide del agregado.
 
-        Para más información: >>> help(dinsar.Piezometria.find_element)
+        Para más información: >>> help(wasar.Piezometria.find_element)
 
         Parámetros
         ----------
@@ -225,7 +225,7 @@ class Agregado:
         -------
         Seleccionar el agregado '2' y vincularle el segundo piezómetro más cercano
         y la estación pluviométrica más cerana
-        >>> Doñana = dinsar.example.get_model()
+        >>> Doñana = wasar.example.get_model()
         >>> A2 = Doñana.agregado('2')
         >>> A2.set_piezo(way='nearest', orden=2)
         >>> A2.set_estacion()
@@ -273,7 +273,7 @@ class Agregado:
         únicamente se puedo elegir una estación y se puede de indicar la natruraleza
         de los datos ('values').
 
-        Para más información: >>> help(dinsar.Precipitacion.find_element)
+        Para más información: >>> help(wasar.Precipitacion.find_element)
 
         Parámetros
         ----------
@@ -348,7 +348,7 @@ class Agregado:
         Ver también
         -----------
         >>> help(Agregado.set_piezo)
-        >>> help(dinsar.DataBase)
+        >>> help(wasar.DataBase)
 
         """
         assert isinstance(way, str), f"'{way}' no es un str."
@@ -421,7 +421,7 @@ class Agregado:
 
         Ejemplo
         ------
-        >>> Doñana = dinsar.example.get_model()
+        >>> Doñana = wasar.example.get_model()
         >>> A2 = Doñana.agregado('2')
         >>> A2.plot()
 
@@ -630,7 +630,7 @@ class Agregado:
         
         Ejemplo
         -------
-        >>> Doñana = dinsar.example.get_model()
+        >>> Doñana = wasar.example.get_model()
         >>> Doñana.get('P').mapa(['Moguer', 'Niebla'])
         
         """
@@ -718,7 +718,7 @@ class Agregado:
         # **********************************************************************
         else:
 
-            _dinsar_plot_params(deactivate=True)
+            _wasar_plot_params(deactivate=True)
 
             pol_style = dict(facecolor='None', ec='k', lw=0.8)
 
@@ -764,7 +764,7 @@ class Agregado:
             if savefig:
                 ax.figure.savefig('Mapa.png')
 
-            _dinsar_plot_params()
+            _wasar_plot_params()
 
             return ax
     
@@ -780,7 +780,7 @@ class Agregado:
 
         msg = (f"El modelo no presenta ninguna base de datos de {bd_map[which]}."
                 "\nPuedes añadirla a través del método 'append'.\n"
-                "Para más información: >>> help(dinsar.parts)")
+                "Para más información: >>> help(wasar.parts)")
         assert len(bd_dic.values()) > 0, msg
 
         if name:
@@ -800,12 +800,12 @@ class Agregado:
     def wavelet(self, freq, *series, **kwargs):
         """ Método para el análisis wavelet univariante o bivariante de las series
         temporales asociadas a este agregado o de cualquier otra introducida como
-        un objeto de pandas. Se basa en la clase Wavelet del módulo dinsar.wavelet.
+        un objeto de pandas. Se basa en la clase Wavelet del módulo wasar.wavelet.
 
         Un correcto análisis wavelet requiere de una minuciosa configuración de
         los parámetros de partida, introducidos como **kwargs. Puede consultar
         las opciones disponibles y sus funcionalidades, respectivamente, en
-        >>> help(dinsar.wavelet)
+        >>> help(wasar.wavelet)
         y
         https://cran.r-project.org/web/packages/WaveletComp/WaveletComp.pdf
 
@@ -835,11 +835,11 @@ class Agregado:
             Wavelet Transform). Si se introducen dos, se calcula la XWT (Cross
             Wavelet Transform) y la WTC (Wavelet Transform Coherence).
 
-        **kwargs: Otros argumentos disponibles. Consultar en dinsar.wavelet
+        **kwargs: Otros argumentos disponibles. Consultar en wasar.wavelet
         
         Devuelve
         --------
-        dinsar.Wavelet
+        wasar.Wavelet
 
         Ejemplo
         -------
@@ -847,7 +847,7 @@ class Agregado:
         piezómetro más cercano del Agregado '2', considerando una frecuencia de
         muestreo mensual.
 
-        >>> Doñana = dinsar.example.get_model()
+        >>> Doñana = wasar.example.get_model()
         >>> A2 = Doñana.agregado('2').set_piezo(way='nearest')
         >>> W = A2.wavelet('M','Asc','piezo')
         >>> W.image         # Para obtener las figuras resultantes.
