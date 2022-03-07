@@ -53,6 +53,7 @@ If you use the program, please cite it as follows:
 
     >>> mymap = Model.mapa(LayerControl=False)
     >>> Model.get('Asc').mapa(m=mymap)
+
 ![map](https://user-images.githubusercontent.com/75794654/156733794-922a0bfe-e42b-4f4e-93fa-bf0cdcf71511.png)
 
 A very useful tool of `wasar` are **wavelet tools**, which allow to perform frequency analysis of the time series.

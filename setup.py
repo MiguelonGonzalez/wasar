@@ -11,6 +11,7 @@ setup(
   author_email="miguigonn@gmail.com, c.guardiola@igme.es",
   description="Python package for analyzing A-DInSAR time series.",
   long_description=long_description,
+  long_description_content_type='text/markdown',
   license="GNU GENERAL PUBLIC LICENSE Version 3",
   url="https://github.com/MiguelonGonzalez/wasar",
   install_requires=[
