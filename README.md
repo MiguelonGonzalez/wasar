@@ -1,11 +1,11 @@
-# Wasar: Analysis of DInSAR time series.
+# Wasar: Analysis of A-DInSAR time series.
 ![image](https://user-images.githubusercontent.com/75794654/157041747-26d4aad0-95d3-442e-a3f8-6dc1072b1185.png)
 
-This package allows to analyze the ground deformation of a region and to compare it with other climatic variables, such as groundwater levels or precipitation. In addition, the inclusion of **wavelet** tools allows to analyze the main periodicities of the model variables and estimate cause-effect processes.
+This package allows to analyze the ground deformation of a region and to compare it with other climatic variables, such as groundwater levels or rainfall. In addition, the inclusion of **wavelet** tools allows to analyze the main periodicities of the model variables and estimate cause-effect processes.
 
 ## Introduction
 
-Many regions worldwide are affected by **ground subsidence phenomena**. Abusive water withdrawal from aquifers is one the main factors than can lead to this kind of processes. Although ground motion monitoring can be performed with in-situ instruments, one of the most widely used techniques in the last decades is the **Differential Interferometry Synthetic Aperture Radar** (DInSAR). The DInSAR technique consists on the superposition of numerous SAR images of the same region of the Earth, thus obtaining an image of the ground motion occurring between the SAR images acquisitions. Analyzing multiple time series of ground movement in a given region, and comparing them with groundwater level variatons (or other variables), are the manin purposes of the present program.
+Many regions worldwide are affected by **ground subsidence phenomena**. Abusive water withdrawal from aquifers is one the main factors than can lead to this kind of processes. Although ground motion monitoring can be performed with in-situ instruments, one of the most widely used techniques in the last decades is the **Advanced Differential Interferometry Synthetic Aperture Radar** (A-DInSAR). The A-DInSAR technique consists on the superposition of numerous SAR images of the same region of the Earth, thus obtaining an image of the ground motion occurring between the SAR images acquisitions. Analyzing multiple time series of ground movement in a given region, and comparing them with groundwater level variatons (or other variables), are the manin purposes of the present program.
 
 ## Install
 
