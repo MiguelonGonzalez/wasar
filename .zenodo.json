@@ -1,0 +1,24 @@
+{
+  "description": "Wasar is an open-source Python package for studying Advanced Differential Interferometry Synthetic Aperture Radar (DInSAR) time series and to compare it with other climatic variables, such as groundwater levels or rainfall.",
+  "license": "GPL-3.0",
+  "title": "Wasar: Analysis of A-DInSAR time series.",
+  "upload_type": "software",
+  "creators": [
+    {
+      "affiliation": "Freelance",
+      "name": "Miguel González-Jiménez",
+      "orcid": "0000-0002-6708-0311"
+    }
+              ],
+  "access_right": "open",
+  "keywords": [
+    "python",
+    "groundwater",
+    "hydrogeology",
+    "gis",
+    "insar",
+    "time series",
+    "wavelet",
+    "open source",
+  ]
+}
