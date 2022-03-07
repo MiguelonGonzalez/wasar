@@ -1,5 +1,6 @@
 # Dinsar: Analysis of DInSAR time series.
-![image](https://user-images.githubusercontent.com/75794654/156266031-0137cf89-f55f-4ce8-9695-688a7909c7af.png)
+![image](https://user-images.githubusercontent.com/75794654/157017286-b21db6c5-897d-410f-bc7e-45297ccfd473.png)
+
 
 This package allows to analyze the ground deformation of a region and to compare it with other climatic variables, such as groundwater levels or precipitation. In addition, the inclusion of **wavelet** tools allows to analyze the main periodicities of the model variables and estimate cause-effect processes.
 
@@ -15,7 +16,7 @@ Released source packages are available on [PyPi](https://pypi.org/). You can **s
 
 Since geopandas dependencies could cause conflicts with other spatial packages, it's highly recommended to create first a [new environment](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-with-commands), as well as taking a look at the `geopandas` [installation guidelines](https://geopandas.org/en/stable/getting_started/install.html).
 
-An optional package must be installed for the use of **wavelet** analysis. It's `rpy2` package, and it can be simply installed via ´pip´:
+An optional package must be installed for the use of **wavelet** analysis. It's `rpy2` package, and it can be simply installed via `pip`:
 
 `pip install rpy2`
 
@@ -32,7 +33,7 @@ We are Miguel González Jiménez and Carolina Guardiola Albert. You can contact 
     
 ## Get started
 
-In the 'example' folder you can find several **tutorials** that will help you to get started with the program. Also, the functions, classes and modules are fully explained in Spanish, so if you have doubts about their behavior, just use the built-in `help`, the `?` mark or the tab button in Jupyter Notebook.
+In the *example* folder you can find several **tutorials** that will help you to get started with the program. Also, the functions, classes and modules are fully explained in Spanish, so if you have doubts about their behavior, just use the built-in `help`, the `?` mark or the tab button in Jupyter Notebook.
 
 Example:    `help(dinsar.Dataset.find_element)` or `dinsar.Dataset.find_element?` or `dinsar.Dataset.find_element` + `.` + *`press tab`*
 
