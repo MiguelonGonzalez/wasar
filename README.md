@@ -42,6 +42,11 @@ This project is licensed under the terms of the GNU General Public License v3.0
 
 ## How to cite wasar
 
+If you use the program, please cite it as follows:
+
+- González-Jiménez, M. & Guardiola-Albert, C. (XXXX). Wasar: Analysis of A-DInSAR time series. (Version X.X.X).
+    Zenodo. http://doi.org/10.5281/zenodo.6334996
+
 ## Example
 
     >>> import wasar
