@@ -9,7 +9,7 @@ setup(
   version="0.0.1",
   author="Miguel González Jiménez & Carolina Guardiola Albert",
   author_email="miguigonn@gmail.com, c.guardiola@igme.es",
-  description="Python package for analyzing Advanced DInSAR time series.",
+  description="Python package for analyzing A-DInSAR time series.",
   long_description=long_description,
   license="GNU GENERAL PUBLIC LICENSE Version 3",
   url="https://github.com/MiguelonGonzalez/wasar",
