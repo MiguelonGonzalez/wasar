@@ -1,6 +1,5 @@
 # Dinsar: Analysis of DInSAR time series.
-![image](https://user-images.githubusercontent.com/75794654/157017286-b21db6c5-897d-410f-bc7e-45297ccfd473.png)
-
+![image](https://user-images.githubusercontent.com/75794654/157041747-26d4aad0-95d3-442e-a3f8-6dc1072b1185.png)
 
 This package allows to analyze the ground deformation of a region and to compare it with other climatic variables, such as groundwater levels or precipitation. In addition, the inclusion of **wavelet** tools allows to analyze the main periodicities of the model variables and estimate cause-effect processes.
 
