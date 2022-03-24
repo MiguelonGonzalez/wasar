@@ -423,6 +423,7 @@ class Wavelet:
 #*******************************************************************************
 
 _cwt_func = """
+if("WaveletComp" %in% rownames(installed.packages()) == FALSE) {install.packages("WaveletComp")}
 library(WaveletComp)
 Sys.setlocale("LC_TIME", "English")
 
@@ -482,6 +483,8 @@ dev.off()
 #########################################################################
 
 _xwt_func = """
+if("WaveletComp" %in% rownames(installed.packages()) == FALSE) {install.packages("WaveletComp")}
+
 library(WaveletComp)
 Sys.setlocale("LC_TIME", "English")
 
