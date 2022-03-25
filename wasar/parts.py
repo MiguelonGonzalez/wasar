@@ -344,7 +344,12 @@ class Dataset(_Part):
         Color con el que se representará este Dataset. Ha de ser válido por 
         la librería Matplotlib (**). Te puede resultar de gran ayuda esta (***)
         página web para seleccionar el color que desees.
-            
+
+    units Opcional Default 'cm'
+        Unidades de los datos de entrada.
+
+    Los **kwargs se pasan a la función geopandas.read_file()
+
     Devuelve
     -------
     Objeto wasar.parts.Dataset
@@ -826,9 +831,16 @@ class Precipitacion(_Bd):
     name str 
         Nombre con el que se bautiza a la base de datos.
     
-    date_format str (opcional) Default '%Y-%m-%d'
+    date_format str Opcional Default '%Y-%m-%d'
         Formato de las fechas.
         Nomenclatura: https://www.dataindependent.com/pandas/pandas-to-datetime/
+    
+    color Opcional Default '#D1843C'
+        Color con el que se representará esta base de datos. Te puede ser de gran
+        ayuda servirte de esta página web: https://htmlcolorcodes.com/es/
+
+    units Opcional Default 'mm'
+        Unidades de los datos de entrada.
 
     **kwargs: Argumentos opcionales que se pasan a la función pandas.read_excel
         o pandas.read_csv según la naturaleza del archivo.
@@ -981,7 +993,14 @@ class Piezometria(_Bd):
     date_format str (opcional) Default '%Y-%m-%d'
         Formato de las fechas.
         Nomenclatura: https://www.dataindependent.com/pandas/pandas-to-datetime/
-        
+
+    color Opcional Default '#3C8BD1'
+        Color con el que se representará esta base de datos. Te puede ser de gran
+        ayuda servirte de esta página web: https://htmlcolorcodes.com/es/
+
+    units Opcional Default 'msnm' (meters above sea level)
+        Unidades de los datos de entrada.
+
     **kwargs: Argumentos opcionales que se pasan a la función pandas.read_excel
         o pandas.read_csv según la naturaleza del archivo.
         
@@ -1026,6 +1045,13 @@ class DataBase(_Bd):
     date_format str (opcional) Default '%Y-%m-%d'
         Formato de las fechas.
         Nomenclatura: https://www.dataindependent.com/pandas/pandas-to-datetime/
+
+    color Opcional Default (random)
+        Color con el que se representará esta base de datos. Te puede ser de gran
+        ayuda servirte de esta página web: https://htmlcolorcodes.com/es/
+
+    units Opcional Default None
+        Unidades de los datos de entrada.
 
     **kwargs: Argumentos opcionales que se pasan a la función pandas.read_excel
         o pandas.read_csv según la naturaleza del archivo.
