@@ -20,6 +20,26 @@ An optional package must be installed for the use of **wavelet** analysis. It's 
 
 `pip install rpy2`
 
+-----
+
+In case you find problems installing geopandas, here we leave the procedure we have used to install geopandas from the Anaconda Powershell Prompt:
+
+1. Create a new environment (in this example with the name enviname):
+
+conda create --name enviname
+
+2. Activate the new environment:
+
+conda activate enviname
+
+3. Install geopandas:
+
+conda install -c conda-forge python=3.9 fiona shapely rasterio pyproj pandas jupyterlab jupyter geopandas
+
+4. Open a new jupyter notebook from your working directory:
+
+jupyter notebook --notebook-dir=c:\working_directory
+
 ### Dependencies
 
 - `geopandas`
