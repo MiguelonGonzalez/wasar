@@ -26,19 +26,19 @@ In case you find problems installing geopandas, here we leave the procedure we h
 
 1. Create a new environment (in this example with the name enviname):
 
-conda create --name enviname
+`conda create --name enviname`
 
 2. Activate the new environment:
 
-conda activate enviname
+`conda activate enviname`
 
 3. Install geopandas:
 
-conda install -c conda-forge python=3.9 fiona shapely rasterio pyproj pandas jupyterlab jupyter geopandas
+`conda install -c conda-forge python=3.9 fiona shapely rasterio pyproj pandas jupyterlab jupyter geopandas`
 
 4. Open a new jupyter notebook from your working directory:
 
-jupyter notebook --notebook-dir=c:\working_directory
+`jupyter notebook --notebook-dir=c:\working_directory`
 
 ### Dependencies
 
