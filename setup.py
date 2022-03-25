@@ -6,7 +6,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 setup(
   
   name="wasar",
-  version="0.0.2",
+  version="0.0.3",
   author="Miguel González Jiménez & Carolina Guardiola Albert",
   author_email="miguigonn@gmail.com, c.guardiola@igme.es",
   description="Python package for analyzing A-DInSAR time series.",
