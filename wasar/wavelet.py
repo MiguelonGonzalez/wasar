@@ -118,6 +118,11 @@ class Wavelet:
         self.original_ts = series
         self.freq = freq
         self.kwargs = kwargs
+
+        # Installing WaveletComp if requiered
+        commands = """if("WaveletComp" %in% rownames(installed.packages()) == FALSE) 
+                   {install.packages("WaveletComp")}"""
+        r(commands)
         
         # CALCULAR CWT
         if len(series) == 1:
@@ -423,7 +428,6 @@ class Wavelet:
 #*******************************************************************************
 
 _cwt_func = """
-if("WaveletComp" %in% rownames(installed.packages()) == FALSE) {install.packages("WaveletComp")}
 library(WaveletComp)
 Sys.setlocale("LC_TIME", "English")
 
@@ -483,8 +487,6 @@ dev.off()
 #########################################################################
 
 _xwt_func = """
-if("WaveletComp" %in% rownames(installed.packages()) == FALSE) {install.packages("WaveletComp")}
-
 library(WaveletComp)
 Sys.setlocale("LC_TIME", "English")
 
